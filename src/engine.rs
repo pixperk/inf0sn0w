@@ -1,12 +1,12 @@
 
 use std::sync::Arc;
 
-use crate::plugins::{BreachPlugin, GitHubPlugin, OsintPlugin};
+use crate::plugins::{BreachPlugin, GitHubPlugin, OsintPlugin, RedditPlugin};
 
 pub async fn run_username_scan(username: &str) {
     let plugins: Vec<Arc<dyn OsintPlugin>> = vec![
         Arc::new(GitHubPlugin),
-        // Add more username-based plugins here
+        Arc ::new(RedditPlugin)
     ];
 
     for plugin in plugins {

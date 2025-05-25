@@ -2,9 +2,11 @@ use async_trait::async_trait;
 
 mod github;
 mod breach;
+mod reddit;
 
 pub use github::*;
 pub use breach::*;
+pub use reddit::*;
 
 
 #[async_trait]
